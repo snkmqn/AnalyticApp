@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Analytics Dashboard</title>
+    <link rel="stylesheet" href="css/style.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+
+<div class="container">
+    <h1>Analytics Dashboard</h1>
+
+    <div class="form-container">
+        <label for="field">Select Field:</label>
+        <select id="field">
+            <option value="GDP">GDP</option>
+            <option value="population">Population</option>
+            <option value="lifeExpectancy">Life Expectancy</option>
+        </select>
+
+        <label for="start_date">Start Date:</label>
+        <input type="date" id="start_date">
+
+        <label for="end_date">End Date:</label>
+        <input type="date" id="end_date">
+
+        <button onclick="fetchData()">Get Data</button>
+    </div>
+
+    <div id="chart-container">
+        <canvas id="myChart"></canvas>
+    </div>
+
+    <div class="metrics">
+        <p id="avg">Average: -</p>
+        <p id="min">Minimum: -</p>
+        <p id="max">Maximum: -</p>
+        <p id="stdDev">Standard Deviation: -</p>
+    </div>
+</div>
+
+<script src="js/script.js"></script>
+</body>
+</html>
